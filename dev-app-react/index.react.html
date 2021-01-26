@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+			// jsx:React.createElement　
+			//第1引数：描画したい要素名
+			// 第２引数：描画したい要素に渡す属性(オブジェクト)
+			// 第３引数：描画したい要素の子要素(描画したい要素の子要素)
+			//const element = React.createElement('p', null, 'hello react')
+			const app = document.getElementById('app'); 
+
+			class HelloWorld extends React.Component {
+				constructor(props) {
+					super(props);
+				}
+				return() {
+					<div>
+						<HelloWorld/>ß
+					</div>
+				}
+			}
+			
+			function Text({id, children}) {
+				return <p id={id} className="text">{children}</p>
+			}
+			// ReactDOM:仮想DOMの生成
+			// 第1引数：描画したい要素(React 要素)
+			// 第２匹数：React 要素を内部に描画する親要素(HTML 要素)
+			ReactDOM.render(<Text id="the-text">Hello world</Text>, app);
+
+    </script>
+</body>
+</html>

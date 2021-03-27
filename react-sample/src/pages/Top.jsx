@@ -1,16 +1,9 @@
-import React from "react";
+import React from 'react';
 
-//components
-import Layout from "../components/layouts/Layout";
-
-const Top = () => {
-  return (
+export const Top = () => {
+  return(
     <>
-      <Layout>
-        <h1>this is TopPage</h1>
-      </Layout>
+      <div>Top</div>
     </>
   );
 }
-
-export default Top;
